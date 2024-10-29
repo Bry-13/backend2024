@@ -8,7 +8,17 @@ POST http://localhost:3000/usuarios/
 content-type: application/json
 
 {
-"nombre": "Bryan", 
-"apellidos": "Morales", 
-"email": "bryan.0702mc@gmail.com"
+"nombre": "Bry", 
+"apellidos": "Contreras", 
+"email": "bryan0702mc@gmail.com"
+}
+
+###
+PUT http://localhost:3000/usuarios/2
+content-type: application/json
+
+{
+  "nombre": "Bry", 
+"apellidos": "Contreras", 
+"email": "bryan0702mc@gmail.com"  
 }
