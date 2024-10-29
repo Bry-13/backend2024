@@ -1,0 +1,24 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "Servidor web de demostración",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bry-13/backend2024.git"
+  },
+  "keywords": [
+    "webserver",
+    "server"
+  ],
+  "author": "Bryan Morales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bry-13/backend2024/issues"
+  },
+  "homepage": "https://github.com/Bry-13/backend2024#readme"
+}
+
