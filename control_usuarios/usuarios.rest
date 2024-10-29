@@ -1,1 +1,14 @@
 GET http://localhost:3000/usuarios
+
+###
+GET http://localhost:3000/usuarios5
+
+###
+POST http://localhost:3000/usuarios/ 
+content-type: application/json
+
+{
+"nombre": "Bryan", 
+"apellidos": "Morales", 
+"email": "bryan.0702mc@gmail.com"
+}
