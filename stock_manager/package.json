@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "name": "stock_manager",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bry-13/backend2024.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bry-13/backend2024/issues"
+  },
+  "homepage": "https://github.com/Bry-13/backend2024#readme",
+  "description": ""
+}
