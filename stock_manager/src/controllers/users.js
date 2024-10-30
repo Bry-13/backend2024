@@ -1,89 +1,98 @@
 const {request , response} =  require('express');
 
 const users = [
-    {id: 1, name: 'John Doe'},
-    {id: 2, name: 'Jane Doe'},
-    {id: 3, name: 'Bob Smith'},
+  {id: 1, name: 'John Doe'},
+  {id: 2, name: 'Jane Doe'},
+  {id: 3, name: 'Bob Smith'},
 ];
 
 const getAll= (req = request, res= response) => {
-    res.send(users); 
+  res.send(users); 
 }
 
 const getById= (req = request, res= response) => {
-    const {id} = req.params;
+  const {id} = req.params;
 
-    if(isNaN(id)){
-        res.status(400).send('Invalid ID');
-        return;
-    }
+  if(isNaN(id)){
+    res.status(400).send('Invalid ID');
+    return;
+  }
 
-    const user = users.find(user => user.id === +id);
+  const user = users.find(user => user.id === +id);
 
-    if(!user){
-        res.status(404).send('User not found');
-        return;
-    } 
+  if(!user){
+    res.status(404).send('User not found');
+    return;
+  } 
 
-    res.send(user);
+  res.send(user);
 }
 
-// Agregar un nuevo usuario
-    const addUser = (req = request, res = response) => {
-        const { name } = req.body;
-
-        if (!name) {
-        res.status(400).send('Name is required');
-        return;
-        }
-
-        const newUser = { id: users.length + 1, name };
-        users.push(newUser);
-        res.status(201).send(newUser);
-    };
-  
-  // Actualizar un usuario existente
-    const updateUser = (req = request, res = response) => {
-    const { id } = req.params;
+// Crear un nuevo usuario
+const createUser = (req = request, res = response) => {
     const { name } = req.body;
-  
-    if (isNaN(id)) {
-      res.status(400).send('Invalid ID');
-      return;
-    }
-  
-    const user = users.find((user) => user.id === +id);
-    if (!user) {
-      res.status(404).send('User not found');
-      return;
-    }
-  
+
     if (!name) {
-      res.status(400).send('Name is required');
+      res.status(400).send("Bad request. The Name field is missing.");
+      return; 
+    }
+
+    const user = users.find(user => user.name === name);
+        
+    if (user) {
+      res.status(409).send('User already exists');
       return;
     }
-  
-    user.name = name;
-    res.send(user);
-  };
-  
-    // Eliminar un usuario
-    const deleteUser = (req = request, res = response) => {
-    const { id } = req.params;
-  
-    if (isNaN(id)) {
-      res.status(400).send('Invalid ID');
-      return;
+
+    users.push({id: users.length + 1, name});
+    res.send("User created succesfully");
+}
+
+// Actualizar datos de un usuario
+const updateUser = (req = request, res = response) => {
+  const {id} = req.params;
+  const {name} = req.body;
+
+  if(isNaN(id)){
+    res.status(400).send('Invalid ID');
+    return;
+  }
+
+  const user = users.find(user => user.id === +id);
+
+  if(!user){
+    res.status(404).send('User not found');
+    return;
+  }
+
+  users.forEach(user => {
+    if (user.id === +id){
+      user.name = name;
     }
+  });
+  res.send("User updated succesfully");
+}
+
+//Eliminar un usuario
+const deleteUser = (req = request, res = response) => {
+  const {id} = req.params;
+
+  if(isNaN(id)){
+    res.status(400).send('Invalid ID');
+    return;
+  }
+
+  const user = users.find(user => user.id === +id);
+
+  if(!user){
+    res.status(404).send('User not found');
+    return;
+  }
+
+  users.splice(users.findIndex((user) => user.id === +id), 1);
+  res.send("User deleted succesfully");
   
-    const index = users.findIndex((user) => user.id === +id);
-    if (index === -1) {
-      res.status(404).send('User not found');
-      return;
-    }
+}
+
   
-    users.splice(index, 1);
-    res.status(204).send(); // 204 (No Content) Indica éxito sin contenido adicional
-  };
-  
-  module.exports = { getAll, getById, addUser, updateUser, deleteUser }; 
+module.exports = { getAll, getById, createUser, updateUser, deleteUser}; 
