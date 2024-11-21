@@ -1,23 +1,76 @@
+### Mostrar todos los usuarios
 GET http://localhost:3000/users/
 
-###
+### Mostrar usuario según el ID
 GET http://localhost:3000/users/1
 
-###
+### Agregar usuario
 POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
-  "name": "Bryan Morales"
+  "username": "Bry13",
+  "password": "Bry1307",
+  "email": "bryan13.0702mc@gmail.com"
 }
 
-###
+### Actualizar usuario
 PUT http://localhost:3000/users/1
 Content-Type: application/json
 
 {
-  "name": "Stephen Curry"
+  "username": "Stephen Curry"
 }
 
+### Eliminar usuario
+DELETE http://localhost:3000/users/3
+
 ###
-DELETE http://localhost:3000/users/2
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "Bry13",
+  "password": "Bry1307"
+}
+
+### Mostrar todos los miembros de staff
+GET http://localhost:3000/staff
+
+### Mostrar un miembro específico de staff por ID
+GET http://localhost:3000/staff/3
+
+### Agregar un nuevo miembro a staff
+POST http://localhost:3000/staff
+Content-Type: application/json
+
+{
+  "first_name": "Breyi",
+  "last_name": "Contreras",
+  "birth_date": "2002-12-07",
+  "gender": "M",
+  "phone_number": "1234567890",
+  "email": "breyi0713@gamil.com",
+  "address": "hay un árbol",
+  "is_active": true,
+  "user_id": 4
+}
+
+### Actualizar un miembro específico de staff
+PUT http://localhost:3000/staff/2
+Content-Type: application/json
+
+{
+  "first_name": "Bruno",
+  "last_name": "Mars",
+  "birth_date": "1985-10-08",
+  "gender": "M",
+  "phone_number": "1234567891",
+  "email": "brunito@gmail.com",
+  "address": "sabrá dios donde vive",
+  "is_active": true,
+  "user_id": 4
+}
+
+### Eliminar un miembro específico de staff por ID
+DELETE http://localhost:3000/staff/4
