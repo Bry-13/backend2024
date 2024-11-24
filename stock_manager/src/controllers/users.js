@@ -157,7 +157,7 @@ const updateUser = async (req = request, res = response) => {
 const deleteUser = async (req = request, res = response) => {
   const {id} = req.params;
 
-  let coon;
+  let conn;
   try{
     conn = await pool.getConnection();
     
