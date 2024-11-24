@@ -37,7 +37,7 @@ const getUserById = async (req = request, res= response) => {
   let conn;
   try {
     conn = await pool.getConnection();
-    const user = await conn.query(usersQueries.getById, [+ID]);
+    const user = await conn.query(usersQueries.getById, [+id]);
     
     if(user.length === 0){
       res.status(404).send('User not found');

@@ -9,9 +9,9 @@ POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
-  "username": "Bry13",
+  "username": "Bry1307",
   "password": "Bry1307",
-  "email": "bryan13.0702mc@gmail.com"
+  "email": "bry13.0702mc@gmail.com"
 }
 
 ### Actualizar usuario
@@ -19,7 +19,7 @@ PUT http://localhost:3000/users/1
 Content-Type: application/json
 
 {
-  "username": "Stephen Curry"
+  "username": "Bryan Morales"
 }
 
 ### Eliminar usuario
@@ -38,7 +38,7 @@ Content-Type: application/json
 GET http://localhost:3000/staff
 
 ### Mostrar un miembro específico de staff por ID
-GET http://localhost:3000/staff/3
+GET http://localhost:3000/staff/2
 
 ### Agregar un nuevo miembro a staff
 POST http://localhost:3000/staff
