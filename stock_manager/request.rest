@@ -45,15 +45,15 @@ POST http://localhost:3000/staff
 Content-Type: application/json
 
 {
-  "first_name": "Breyi",
-  "last_name": "Contreras",
+  "first_name": "Bry",
+  "last_name": "Morales",
   "birth_date": "2002-12-07",
   "gender": "M",
-  "phone_number": "1234567890",
-  "email": "breyi0713@gamil.com",
-  "address": "hay un árbol",
+  "phone_number": "2871010101",
+  "email": "bry07mc@gamil.com",
+  "address": "casa azul",
   "is_active": true,
-  "user_id": 4
+  "user_id": 3
 }
 
 ### Actualizar un miembro específico de staff

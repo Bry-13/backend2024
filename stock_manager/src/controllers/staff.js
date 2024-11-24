@@ -138,7 +138,7 @@ const deleteStaff = async (req = request, res = response) => {
             return;
         }
 
-        res.status(204).send();
+        res.send('Staff member deleted');
     } catch (error) {
         res.status(500).send(error);
     } finally {
