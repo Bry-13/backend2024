@@ -1,0 +1,34 @@
+### Mostrar
+GET http://localhost:3000/products/
+
+### Mostrar un miembro específico por ID
+GET http://localhost:3000/products/3
+
+### Agregar
+POST http://localhost:3000/products/
+Content-Type: application/json
+
+{
+  "product": "leche lala",
+  "description": "entera",
+  "stock": "14",
+  "measurement_unit": "piece",
+  "price": "24.00",
+  "discount": "3.00"
+}
+
+### Actualizar
+PUT http://localhost:3000/products/2
+Content-Type: application/json
+
+{
+  "product": "Cheerios",
+  "description": "cereal de miel",
+  "stock": "17",
+  "measurement_unit": "piece",
+  "price": "28.00",
+  "discount": "4.00"
+}
+
+### Eliminar por ID
+DELETE http://localhost:3000/products/1

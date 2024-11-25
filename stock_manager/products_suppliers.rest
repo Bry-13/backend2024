@@ -1,0 +1,28 @@
+### Mostrar
+GET http://localhost:3000/products_suppliers/
+
+### Mostrar un miembro específico por ID
+GET http://localhost:3000/products_suppliers/5
+
+### Agregar
+POST http://localhost:3000/products_suppliers/
+Content-Type: application/json
+
+{
+  "product_id": "2",
+  "supplier_rfc": "VECJ880326",
+  "notes": "prueba 2"
+}
+
+### Actualizar
+PUT http://localhost:3000/products_suppliers/13
+Content-Type: application/json
+
+{
+ "product_id": "3",
+  "supplier_rfc": "GRBA542864",
+  "notes": "prueba actz 1"
+}
+
+### Eliminar un miembro ID
+DELETE http://localhost:3000/products_suppliers/12

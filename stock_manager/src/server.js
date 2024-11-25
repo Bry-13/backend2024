@@ -1,6 +1,9 @@
 const express = require ('express');
 const usersRoutes = require('./routes/users');
 const staffRoutes = require('./routes/staff');
+const products_suppliersRoutes = require('./routes/products_suppliers');
+const products = require('./routes/products');
+const suppliers = require('./routes/suppliers');
 
 
 class Server {
@@ -21,6 +24,9 @@ class Server {
     routes(){
         this.app.use('/users', usersRoutes);
         this.app.use('/staff', staffRoutes);
+        this.app.use('/products_suppliers', products_suppliersRoutes);
+        this.app.use('/products', products);
+        this.app.use('/suppliers', suppliers);
     }
 
     start(){
