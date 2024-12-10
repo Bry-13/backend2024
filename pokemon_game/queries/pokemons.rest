@@ -1,1 +1,28 @@
 GET http://localhost:3000/pokemons
+
+### Obtener por ID
+GET http://localhost:3000/pokemons/2
+
+### Random
+GET http://localhost:3000/pokemons/play
+
+### Crear uno nuevo
+POST http://localhost:3000/pokemons
+Content-Type: application/json
+
+{
+    "name": "Zapdos",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+}
+
+### Editar 
+PUT http://localhost:3000/pokemons/1
+Content-Type: application/json
+
+{
+    "name": "mega-charizard",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6-mega.svg"
+}
+
+### Eliminar
+DELETE http://localhost:3000/pokemons/155

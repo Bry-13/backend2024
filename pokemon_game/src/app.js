@@ -2,6 +2,6 @@ const Server = require('./server');
 
 const server = new Server();
 
-server.seeder();
+//server.seeder();
 
 server.start();
