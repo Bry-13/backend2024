@@ -1,0 +1,12 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "bry13@gmail.com",
+    "password": "bry0713"
+}
+
+###
+GET http://localhost:3000/users/protected
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMzOTQwMTM3LCJleHAiOjE3MzM5NDA0Mzd9.I8vwJG85niNlenfvt0BkEfXwxgnxCPy3PVNN_QsZa6Q
