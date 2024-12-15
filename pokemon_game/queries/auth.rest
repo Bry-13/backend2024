@@ -9,4 +9,4 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/users/protected
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMzOTQwMTM3LCJleHAiOjE3MzM5NDA0Mzd9.I8vwJG85niNlenfvt0BkEfXwxgnxCPy3PVNN_QsZa6Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaXNfYWRtaW4iOjEsImlhdCI6MTczNDMwMDA5NSwiZXhwIjoxNzM0MzAwMzk1fQ.l68_uTP5U1a4hdVAg4wRWGHvq8HjN4abipg-OdHEm50

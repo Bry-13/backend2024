@@ -1,17 +1,22 @@
 GET http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaXNfYWRtaW4iOjEsImlhdCI6MTczNDMwMDA5NSwiZXhwIjoxNzM0MzAwMzk1fQ.l68_uTP5U1a4hdVAg4wRWGHvq8HjN4abipg-OdHEm50
 
 ###
-GET http://localhost:3000/users/1
+GET http://localhost:3000/users/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaXNfYWRtaW4iOjEsImlhdCI6MTczNDMwMDA5NSwiZXhwIjoxNzM0MzAwMzk1fQ.l68_uTP5U1a4hdVAg4wRWGHvq8HjN4abipg-OdHEm50
 
 ###
 POST http://localhost:3000/users
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaXNfYWRtaW4iOjEsImlhdCI6MTczNDMwMDA5NSwiZXhwIjoxNzM0MzAwMzk1fQ.l68_uTP5U1a4hdVAg4wRWGHvq8HjN4abipg-OdHEm50
 
 {
-    "first_name": "Bryan",
-    "last_name": "Morales",
-    "email": "bry13@gmail.com",
-    "password": "bry0713"
+    "first_name": "Pancho",
+    "last_name": "Contreras",
+    "email": "PC13@gmail.com",
+    "password": "pancho0713"
 }
 
 ###
